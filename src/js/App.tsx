@@ -101,8 +101,8 @@ function App() {
 
 	return (
 		<div className="app home">
-			<ArticlesProvider value={ctxArt} ></ArticlesProvider>
-			<ModalProvider value={ctxModal}></ModalProvider>
+			<ArticlesProvider value={ctxArt} />
+			<ModalProvider value={ctxModal} />
 			<ArticleList />
 			<FormModal />
 			<ConfirmModal />
