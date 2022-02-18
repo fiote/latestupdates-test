@@ -1,23 +1,25 @@
 import * as React from "react";
-import { ReactElement } from "react";
-import '../css/genericModal.css';
+import { ReactElement, useContext } from "react";
+import '../css/modal.css';
+import ModalContext, { ModalType } from "../ctxs/Modal";
 
 interface ConfirmationModalParams {
-	visible: boolean;
+	type: ModalType;
 	title: string;
 	body: ReactElement;
-	onClickClose: () => void;
 }
 
 const GenericModal = (params: ConfirmationModalParams) => {
-	const classNames = ['am-modal', params.visible ? 'am-visible' : null];
+	const ctxModal = useContext(ModalContext);
+
+	const classNames = ['am-modal', ctxModal.visible && ctxModal.type === params.type ? 'am-visible' : null];
 	const classModal = classNames.join(' ');
 
 	return (
 		<div className={classModal}>
 
 			<div className='am-wrapper'>
-				<img className='close-icon' src="close-icon.png" onClick={params.onClickClose}/>
+				<img className='close-icon' alt='Close the Modal' src='close-icon.png' onClick={ctxModal.closeModal} />
 
 				<div className='am-title'>
 					<h2>{params.title}</h2>
