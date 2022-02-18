@@ -1,7 +1,8 @@
 # Latest Updates
 
-
 Try it out! https://rawcdn.githack.com/fiote/latestupdates-context/master/build/home.html
+
+![Preview](public/promo.png "Preview")
 
 ### Description
 
