@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab');
+@import url('https://www.aidence.com/wp-content/litespeed/css/b13a3f5618bf758311c8e91c39b727e5.css?ver=65e16');
+
+.home {
+	padding: 30px;
+}
+
+.blog-post {
+	box-shadow: 0px 0px 5px rgba(0,0,0,0);
+
+	.btn-edit-article {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	.btn-delete-article {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+}
+
+.btn-main {
+    box-shadow: 0px 0px 3px grey;
+	transition: all 0.2s;
+}
+
+@positive: #27afc3;
+@negative: #ff5722;
+@neutral: #FFFFFF;
+
+.btn-positive {
+	background: @positive;
+	&:hover { background: darken(@positive, 20%); }
+}
+
+.btn-neutral {
+	background: @neutral;
+	color: black;
+	&:hover {
+		background: darken(@neutral, 10%);
+		color: black;
+	}
+}
+
+.btn-negative {
+	background: @negative;
+	&:hover { background: darken(@negative, 20%); }
+}
+
+.item-empty {
+	min-height: 400px;
+
+	.blog-post {
+		box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+		display: flex;
+		align-items: center;
+		place-content: center;
+	}
+}

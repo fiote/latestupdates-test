@@ -1,0 +1,56 @@
+@import url('https://www.aidence.com/wp-content/litespeed/css/b13a3f5618bf758311c8e91c39b727e5.css?ver=65e16');
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v22/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaA.ttf) format('truetype');
+}
+.home {
+  padding: 30px;
+}
+.blog-post {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+}
+.blog-post .btn-edit-article {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.blog-post .btn-delete-article {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.btn-main {
+  box-shadow: 0px 0px 3px grey;
+  transition: all 0.2s;
+}
+.btn-positive {
+  background: #27afc3;
+}
+.btn-positive:hover {
+  background: #16636e;
+}
+.btn-neutral {
+  background: #FFFFFF;
+  color: black;
+}
+.btn-neutral:hover {
+  background: #e6e6e6;
+  color: black;
+}
+.btn-negative {
+  background: #ff5722;
+}
+.btn-negative:hover {
+  background: #bb2d00;
+}
+.item-empty {
+  min-height: 400px;
+}
+.item-empty .blog-post {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  place-content: center;
+}

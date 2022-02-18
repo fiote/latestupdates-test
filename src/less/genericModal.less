@@ -1,0 +1,101 @@
+.am-modal {
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s;
+	background: rgb(97 108 125 / 92%);
+	position: fixed;
+	top: 0px; left: 0px; right: 0px; bottom: 0px;
+	font-family: 'Roboto Slab';
+    align-items: center;
+    justify-content: center;
+
+	.am-wrapper {
+		position: relative;
+		background: white;
+		padding: 20px;
+		width: 70%;
+		border-radius: 10px;
+		max-width: 1000px;
+
+		transition: all 0.2s;
+		transform: scale(0.95);
+
+		.close-icon {
+			position: absolute;
+			width: 50px;
+			top: 0px;
+			right: 0px;
+			cursor: pointer;
+			padding: 10px;
+			box-sizing: border-box;
+			z-index: 20;
+		}
+
+		.am-body {
+			margin-top: 20px;
+
+			.row10-2 {
+				display: grid;
+				grid-template-columns: auto 200px;
+				column-gap: 20px;
+			}
+
+			form {
+				p.empty {
+					label { color: red; }
+					input, select { border-color: red; }
+				}
+			}
+
+			.image {
+				position: relative;
+				width: 350px;
+				height: 200px;
+				background-size: auto 75%;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+				margin-bottom: 30px;
+				cursor: pointer;
+
+				input {
+					width: 0px;
+					height: 0px;
+					opacity: 0;
+				}
+
+				div {
+					position: absolute;
+					top: 10px;
+					left: 10px;
+				}
+			}
+
+			label {
+				width: 100%;
+
+				input, select {
+					width: 100%;
+				}
+			}
+		}
+
+		.am-actions {
+			display: flex;
+			width: 100%;
+			place-content: center;
+			place-content: space-evenly;
+			padding: 40px 0px 20px;
+		}
+	}
+
+	&.am-visible {
+		visibility: visible;
+		opacity: 1;
+
+		.am-wrapper {
+			transform: scale(1);
+		}
+	}
+}
