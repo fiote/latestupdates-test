@@ -1,6 +1,7 @@
 # Latest Updates
 
-https://rawcdn.githack.com/fiote/latestupdates-context/master/build/home.html
+
+Try it out! https://rawcdn.githack.com/fiote/latestupdates-context/master/build/home.html
 
 ### Description
 
