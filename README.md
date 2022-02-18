@@ -1,4 +1,4 @@
-# Lastest Updates
+# Latest Updates
 
 ### Description
 
