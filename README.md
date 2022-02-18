@@ -1,5 +1,7 @@
 # Latest Updates
 
+https://rawcdn.githack.com/fiote/latestupdates-context/master/build/home.html
+
 ### Description
 
 A small and simple news' CRUD. You can create an infinite number of entries (as long as your localStorage can handle them). You may edit and delete any of them. Each entry has an image, a title, a category and a link.
@@ -17,7 +19,3 @@ Right now I'm storing the base64 data of whatever image you're selecting. This i
 ### Technologies
 
 React with Typescript.
-
-# See it Working
-
-https://rawcdn.githack.com/fiote/latestupdates-context/master/build/home.html
