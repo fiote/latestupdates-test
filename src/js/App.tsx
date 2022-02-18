@@ -22,7 +22,7 @@ function App() {
 		{
 			id: 2,
 			title: 'Artificial Intelligence in Practice 2022',
-			category: 'EVENT',
+			category: 'EVENTS',
 			image: 'https://i0.wp.com/www.aidence.com/wp-content/uploads/2020/09/00109940_cw_image_wi_9f3af12068c3548d7527bd4b316ad317.jpg.pagespeed.ce_.fDsapWt6GJ__1_-removebg-preview.png?fit=300,300',
 			link: 'https://www.mybir.org.uk/CPBase__event_detail?id=a173Y00000GALT7QAP&site=a0N2000000COvFsEAL'
 		},
