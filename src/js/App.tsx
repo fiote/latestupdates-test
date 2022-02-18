@@ -60,12 +60,12 @@ function App() {
 
 	ctxArt.updateArticle = (art: DefArticle) => {
 		if (!art.id) return ctxArt.insertArticle(art);
-		const newArticles = valueArticles.map(x => x.id == art.id ? art : x);
+		const newArticles = valueArticles.map(x => x.id === art.id ? art : x);
 		ctxArt.saveData(newArticles);
 	};
 
 	ctxArt.removeArticle = (art: DefArticle) => {
-		const newArticles = valueArticles.filter(x => x.id != art.id);
+		const newArticles = valueArticles.filter(x => x.id !== art.id);
 		ctxArt.saveData(newArticles);
 	};
 
