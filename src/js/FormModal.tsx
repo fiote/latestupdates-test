@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { FormEvent, useContext, useEffect, useMemo } from "react";
+import { FormEvent, useContext, useEffect } from "react";
 import GenericModal from "./GenericModal";
 import ModalContext, { ModalType } from "../ctxs/Modal";
 import ArticlesContext from "../ctxs/Articles";
@@ -19,11 +19,8 @@ const FormModal = () => {
 
 	useEffect(() => {
 		setForm(ctxModal.entry);
-	}, [ctxModal.entry]);
-
-	useMemo(() => {
 		setClassInputs(emptyErrors);
-	},[]);
+	}, [ctxModal.entry]);
 
 	// ==== INPUT CHANGE ============================================
 
