@@ -12,13 +12,15 @@ A small and simple news' CRUD. You can create an infinite number of entries (as 
 
 2022-02-18
 
-I first did it without using context features. A lot of setStates variables all around being passed down for each child component. It worked, but the code was... [kinda messy](https://github.com/fiote/latestupdates-hooks).
+First version done using basic 'useState' hooks. All features implemented, but the code is quite messy since i'm passing down a lot of variables from component to component.
 
-Then I started rewriting it using context to store/manage 'models', and suddently I was using just a few function to manage all my data with some points consuming it. I would say the code is way better now.
+2022-02-18
+
+Moved from using basic hooks to using context to store/manage 'models'. Suddently I was using just a few function to manage all my data with some points consuming it. I would say the code is way better now.
 
 2022-02-19
 
-Moved from using context to using redux, while also organizing files based on features instead of file types. This made the code even more clean!
+Moved from using context to using redux, while also organizing files based on features instead of file types. This made the code even cleaner!
 
 ### Areas of Improvement
 
