@@ -26,6 +26,8 @@ Moved from using context to using redux, while also organizing files based on fe
 
 Unit and component tests added using jest.
 
+![Preview](public/tests.png "Jest Tests")
+
 ### Areas of Improvement
 
 Right now I'm storing the base64 data of whatever image you're selecting. This is fine, but it's wasteful. Since the max display size for them is around 350x200 pixels, I could shrink those images (painting them on a small canvas and then getting their new data, for example) before storting them.
