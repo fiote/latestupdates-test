@@ -15,11 +15,7 @@ export interface ArticlesState {
 
 const lskArticles = 'storedArticles';
 
-const persistState = (state: ArticlesState) => {
-	localStorage.setItem(lskArticles, JSON.stringify(state.list));
-}
-
-const loadState = () : ArticlesState => {
+export const loadArticlesState = () : ArticlesState => {
 	const state = {
 		list: [
 			{
@@ -46,10 +42,18 @@ const loadState = () : ArticlesState => {
 		]
 	};
 
-	const stored = localStorage.getItem(lskArticles);
-	if (stored) state.list = JSON.parse(stored);
+	if (typeof localStorage != 'undefined') {
+		const stored = localStorage.getItem(lskArticles);
+		if (stored) state.list = JSON.parse(stored);
+	}
 
 	return state;
+}
+
+const persistState = (state: ArticlesState) => {
+	if (typeof localStorage != 'undefined') {
+		localStorage.setItem(lskArticles, JSON.stringify(state.list));
+	}
 }
 
 export const emptyArticle : DefArticle = {
@@ -63,11 +67,11 @@ export const emptyArticle : DefArticle = {
 export const articlesSlice = createSlice({
 	name: 'articles',
 
-	initialState: loadState(),
+	initialState: loadArticlesState(),
 
 	reducers: {
 		insertEntry: (state, action) => {
-			const id = Math.max(...state.list.map(x => x.id))+1;
+			const id = state.list.length ? Math.max(...state.list.map(x => x.id))+1 : 1;
 			const entry = action.payload as DefArticle;
 			state.list.push({...entry, id});
 			persistState(state);

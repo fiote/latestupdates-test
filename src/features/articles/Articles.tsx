@@ -26,12 +26,12 @@ const Articles = () => {
 				<em>updates</em>
 			</h2>
 
-			<div className="row items">
+			<div className="row items" role="list">
 				{articles}
 
 				<div className="col-md-6 col-lg-4 item item-empty" onClick={onClickAdd}>
 					<div className="blog-post">
-						<div className="btn btn-main btn-smaller btn-positive btn-add-article">Add New</div>
+						<div data-testid="add-button" className="btn btn-main btn-smaller btn-positive btn-add-article">Add New</div>
 					</div>
 				</div>
 			</div>

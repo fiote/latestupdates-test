@@ -28,8 +28,8 @@ const ConfirmModal = () => {
 		<div>
 			{description}
 			<div className='am-actions'>
-				<div onClick={onClickConfirm} className="btn btn-main btn-smaller btn-negative btn-delete-article">Yes, Delete it</div>
-				<div onClick={onClickCancel} className="btn btn-main btn-smaller btn-neutral">No, I changed my mind</div>
+				<div data-testid="confirm-button" onClick={onClickConfirm} className="btn btn-main btn-smaller btn-negative btn-delete-article">Yes, Delete it</div>
+				<div data-testid="cancel-button" onClick={onClickCancel} className="btn btn-main btn-smaller btn-neutral">No, I changed my mind</div>
 			</div>
 		</div>
 	)

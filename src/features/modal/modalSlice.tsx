@@ -57,7 +57,6 @@ export const modalSlice = createSlice({
 			state.fieldclass[key] = fclass;
 		},
 		closeModal: (state, action?) => {
-			console.log('closeModal');
 			state.visible = false;
 		},
 	},

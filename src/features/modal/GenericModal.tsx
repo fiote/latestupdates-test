@@ -22,12 +22,13 @@ const GenericModal = (params: ConfirmationModalParams) => {
 	};
 
 	const classNames = ['am-modal', modal.visible && modal.type === params.type ? 'am-visible' : null];
+	const testId = "modal-"+params.type;
 
 	return (
-		<div className={classNames.join(' ')}>
+		<div data-testid={testId} className={classNames.join(' ')}>
 
 			<div className='am-wrapper'>
-				<img className='close-icon' alt='Close the Modal' src='close-icon.png' onClick={onClickClose} />
+				<img data-testid="close-icon-modal" className='close-icon' alt='Close the Modal' src='close-icon.png' onClick={onClickClose} />
 
 				<div className='am-title'>
 					<h2>{params.title}</h2>

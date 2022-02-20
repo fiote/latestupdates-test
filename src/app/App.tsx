@@ -15,13 +15,20 @@ function App() {
 	return (
 		<div className="app home">
 			<Provider store={store}>
-				<Articles />
-				<FormModal />
-				<ConfirmModal />
+				<AppContent/>
 			</Provider>
 		</div>
 	);
-
 }
+
+export const AppContent = () => {
+	return (
+		<div>
+			<Articles />
+			<FormModal />
+			<ConfirmModal />
+		</div>
+	)
+};
 
 export default App;

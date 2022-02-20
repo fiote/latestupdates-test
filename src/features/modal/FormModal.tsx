@@ -15,7 +15,6 @@ const FormModal = () => {
 	// ==== EVENTS ==================================================
 
 	const onFormSubmit = (ev: FormEvent<HTMLFormElement>) => {
-		console.log('onFormSubmit');
 		ev.preventDefault();
 		ev.stopPropagation();
 
@@ -84,19 +83,19 @@ const FormModal = () => {
 
 			<div className='row'>
 				<div className='col-md-12 col-lg-8'>
-					<p className={fieldclass?.title}>
+					<p data-testid="title-p" className={fieldclass?.title}>
 						<label>Title*<br />
 							<span className="wpcf7-form-control-wrap your-name">
-								<input type="text" name="title" value={entry?.title || ''} onChange={onInputChange} className="wpcf7-form-control wpcf7-text" placeholder="Start typing here" />
+								<input data-testid="title-input" type="text" name="title" value={entry?.title || ''} onChange={onInputChange} className="wpcf7-form-control wpcf7-text" placeholder="Start typing here" />
 							</span>
 						</label>
 					</p>
 				</div>
 				<div className='col-md-12 col-lg-4'>
-					<p className={fieldclass?.category}>
+					<p data-testid="category-p" className={fieldclass?.category}>
 						<label>Category*<br />
 							<span className="wpcf7-form-control-wrap">
-								<select name="category" value={entry?.category || ''} onChange={onInputChange}>
+								<select data-testid="category-input" name="category" value={entry?.category || ''} onChange={onInputChange}>
 									<option value=''>...</option>
 									<option value='NEWS'>NEWS</option>
 									<option value='EVENTS'>EVENTS</option>
@@ -108,10 +107,10 @@ const FormModal = () => {
 				</div>
 			</div>
 
-			<p className={fieldclass?.link}>
+			<p data-testid="link-p" className={fieldclass?.link}>
 				<label>Link*<br />
 					<span className="wpcf7-form-control-wrap your-email">
-						<input type="text" name="link" value={entry?.link || ''} onChange={onInputChange} className="wpcf7-form-control" aria-required="true" aria-invalid="false" placeholder="Start typing here" />
+						<input data-testid="link-input" type="text" name="link" value={entry?.link || ''} onChange={onInputChange} className="wpcf7-form-control" aria-required="true" aria-invalid="false" placeholder="Start typing here" />
 					</span>
 				</label>
 			</p>
