@@ -1,18 +1,19 @@
 import * as React from "react";
-import { useContext } from "react";
-import ModalContext from "../ctxs/Modal";
+import { useDispatch } from 'react-redux';
+import { DefArticle } from "./articlesSlice";
+import { openForm, openRemove } from '../modal/modalSlice';
 
 interface  ArticleParams {
 	art: DefArticle;
 }
 
 const Article = (params: ArticleParams) => {
+	const dispatch = useDispatch();
 
 	const { art } = params;
-	const ctxModal = useContext(ModalContext);
 
-	const onClickEdit = () => ctxModal.openForm(art);
-	const onClickDelete = () => ctxModal.openDelete(art);
+	const onClickEdit = () => dispatch(openForm(art));
+	const onClickDelete = () => dispatch(openRemove(art));
 
 	return (
 		<div className="col-md-6 col-lg-4 item" key={params.art.id}>
@@ -32,14 +33,5 @@ const Article = (params: ArticleParams) => {
 		</div>
 	)
 };
-
-export interface DefArticle {
-	id: number;
-	title?: string;
-	category?: string;
-	link?: string;
-	image?: string;
-	[key: string]: any;
-}
 
 export default Article;
