@@ -1,6 +1,6 @@
 # Frontend Engineer Test: Latest Updates
 
-Try it out! [latestupdates-context/master/build/index.html](https://rawcdn.githack.com/fiote/latestupdates-context/master/build/index.html?t=2)
+Try it out! [(click here!)](https://fiote.github.io/latestupdates-test/build/)
 
 ![Preview](public/promo.png "Preview")
 
