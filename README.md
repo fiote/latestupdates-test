@@ -8,7 +8,7 @@ Try it out! [(click here!)](https://fiote.github.io/latestupdates-test/build/)
 
 A small and simple news' CRUD. You can create an infinite number of entries (as long as your localStorage can handle them). You may edit and delete any of them. Each entry has an image, a title, a category and a link.
 
-### Challenges Encountered
+### Changelog
 
 2022-02-18
 
