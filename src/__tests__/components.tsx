@@ -6,7 +6,7 @@ import React from 'react';
 import { AppContent } from '../app/App';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import { render, screen, within, testStore, act } from '../utils/test-utils';
+import { render, screen, within, testStore } from '../utils/test-utils';
 import { Provider } from 'react-redux';
 
 const TestApp = () => {
