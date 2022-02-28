@@ -25,10 +25,10 @@
   background: #e6e6e6;
   color: black;
 }
-.btn-negative {
+.btn-main.btn-negative {
   background: #ff5722;
 }
-.btn-negative:hover {
+.btn-main.btn-negative:hover {
   background: #bb2d00;
 }
 .item-empty {
